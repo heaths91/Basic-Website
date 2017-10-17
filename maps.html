@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="keywords" content="maps, cartography, vizualization, GIS"/>
+      <title> Stuart Heath </title>
+      <!--bootstrap stylesheet links above style.css-->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--scroll bar-->
+    <!--external script links here-->
+    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<!--creates navbar-->
+<nav class="navbar navbar-default navbar-fixed-top main-navbar">
+  <div class="container">
+    <div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+  data-target="#navbar" aria-controls="navbar">
+  <!--screen readers for accessibility-->
+    <span class="sr-only" font-family>Toggle navigation</span>
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+    <span class="menu">Menu</span>
+  </button> <!--display hamburger icon on smaller screens-->
+    <a class="navbar-brand" href="#">Stuart Heath</a> <!--brand name-->
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!--links in navbar-->
+  <ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="maps.html">Maps</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</div><!--end .navbar-collapse-->
+</div><!--end .container-->
+</div><!--end navigation bar--> 
+</nav>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>University of Washington Tacoma</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 47.244, lng: -122.437};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2ihcmWwXWi1VozsLcVFWZ7wtgMyPZDDw&callback=initMap">
+    </script>
+   <div class="panel panel-default">
+  <div class="panel-heading">University of Washington Tacoma</div>
+  <div class="panel-body">
+     <p> The place featured above is the University of Washington Tacoma, where I am studying Geospatial Technology, in the Urban Studies Masters program.<br>This API allows the user to pan and zoom, as well as switch between satellite imagery and the traditional map view.<br>It also allows the user to use Google's streetview to explore the area from a closer, first person point of view.
+  </div>
+</div>
+  </body>
+</html>

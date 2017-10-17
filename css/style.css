@@ -1,0 +1,15 @@
+.portfolio-thumbnail {
+		background-color: #f2efef;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #5b5b5b;
+}
+.jumbotron {
+    margin-bottom: 2px;
+    background-image: url(../assets/enchant.jpg);
+    background-position: 0% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
