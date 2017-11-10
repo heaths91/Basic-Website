@@ -107,7 +107,7 @@
 		style: style,
 		onEachFeature: onEachFeature
 	}).addTo(map);
-	var legend = L.control({position: 'bottomright'});
+	var legend = L.control({position: 'bottomleft'});
 	legend.onAdd = function (map) {
 		var div = L.DomUtil.create('div', 'info legend'),
 			grades = [.4, 5.3, 13.6, 26.2, 52.2, 82.1],
