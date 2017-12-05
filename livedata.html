@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="keywords" content="maps, cartography, vizualization, GIS"/>
+      <title> Stuart Heath </title>
+      <!--bootstrap stylesheet links above style.css-->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--external script links here-->
+    <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<!--creates navbar-->
+<nav class="navbar navbar-default navbar-fixed-top main-navbar">
+  <div class="container">
+    <div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+  data-target="#navbar" aria-controls="navbar">
+  <!--screen readers for accessibility-->
+    <span class="sr-only" font-family>Toggle navigation</span>
+    <span class="glyphicon glyphicon-menu-hamburger"></span>
+    <span class="menu">Menu</span>
+  </button> <!--display hamburger icon on smaller screens-->
+    <a class="navbar-brand" href="#">Stuart Heath</a> <!--brand name-->
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!--links in navbar-->
+  <ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="maps.html">Maps</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</div><!--end .navbar-collapse-->
+</div><!--end .container-->
+</div><!--end navigation bar-->
+</nav>
+<br>
+<br>
+<br>
+<br>
+<center><img src="assets/wedding.JPG" height="400" width="550"></center>
+<div class="page-header">
+      <section class="success" id="about">
+      <div class="container">
+        <h2 class="text-center">Live Data Maps</h2>
+        <hr class="star-light">
+        <center>
+          <iframe src="https://heaths91.github.io/index/earthquakekml.html" width="90%" height="575" frameborder="20" align="middle"></iframe>
+        </center>  
+         <center>
+          <iframe src="https://heaths91.github.io/index/earthquakegeojson.html" width="90%" height="575" frameborder="20" align="middle"></iframe>
+        </center>
+         <center>
+          <iframe src="https://heaths91.github.io/index/earthquakeESRI.html" width="90%" height="575" frameborder="20" align="middle"></iframe>
+        </center>
+      </div>
+    </section>
+</div>
+</body>
+</html>

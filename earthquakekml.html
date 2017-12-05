@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EarthQuake Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+ #info-box {
+      background-color: white;
+      border: 3px solid black;
+      bottom: 30px;
+      height: 20px;
+      padding: 10px;
+      position: absolute;
+      right: 45px;
+    }
+  #title  {
+      background-color: white;
+      border: 3px solid black;
+      top: 30px;
+      height: 20px;
+      padding: 10px;
+      position: absolute;
+      right: 45px;
+    }
+   
+    </style>
+   <!--calls google maps api using unique API key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByVT77PoryjkmQw1GiEmYPbLGg9iIQpMc&callback=initMap"></script>
+    <!--initializes map and sets zoom level and center of map-->
+    <script>
+var map;
+function initialize() {
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    zoom: 25,
+    center: {lat: 37.7749, lng: -122.4194}, 
+  });
+  
+   // Load KML from USGS.
+ var georssLayer = new google.maps.KmlLayer({
+    url: 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month_depth_animated.kml'
+  });
+  georssLayer.setMap(map);
+  }
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+   <body>
+    <div id="map-canvas"></div>
+     <div id="info-box"><b>Click for Magnitude, Time, and Location</b></div>
+     <div id="title"><b>Earthquakes in Past 30 Days</b></div>
+    
+  </body>
+</html>
